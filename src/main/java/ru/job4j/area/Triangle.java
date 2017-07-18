@@ -17,7 +17,7 @@ public class Triangle {
     }
     /**
      *Area triangle
-     *@return результат
+     *@return result
      */
     public double area() {
         double s = 0;
@@ -25,7 +25,7 @@ public class Triangle {
         double b1 = b.oneSize(b.getX(), c.getX(), b.getY(), c.getY());
         double c1 = c.oneSize(c.getX(), a.getX(), c.getY(), a.getY());
         if (a1 + b1 <= c1 || a1 + c1 <= b1 || b1 + c1 <= a1){
-            System.out.println("Треугольник не существует");
+            System.out.println("Triangle no");
         }else{
             double p = (a1 + b1 + c1) / 2;
             s = Math.sqrt(p * (p - a1) * (p - b1) * (p - c1));}
@@ -54,11 +54,11 @@ public class Triangle {
         }
         /**
          *size side
-         *@param x координата первой точки
-         *@param y координата первой точки
-         *@param x1 координата второй точки
-         *@param y1 координата второй точки
-         *@return результат
+        * @ Param x coordinate of the first point
+          * @ Param y coordinate of the first point
+          * @ Param x1 coordinate of the second point
+          * @ Param y1 coordinate of the second point
+         *@return result
          */
         public double oneSize(double x, double x1, double y, double y1) {
             double resultOneSize = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1));
