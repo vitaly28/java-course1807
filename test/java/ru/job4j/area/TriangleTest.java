@@ -2,7 +2,8 @@ package job4j.area;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.number.IsCloseTo.closeTo;
 
 
 public class TriangleTest {
@@ -14,7 +15,7 @@ public class TriangleTest {
         Triangle triangle = new Triangle(a, b, c);
         double result = triangle.area();
         double expected = 2D;
-        assertThat(result, closeTo(expected),0.1);
+        assertThat(result, closeTo(expected,0.1));
         /**
          ????????????????????????????????
          */
